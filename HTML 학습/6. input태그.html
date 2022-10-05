@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+                                            <!--disabled : 서버로 보내면 안되는 데이터,  readonly : 입력은 안되지만  서버로 전송 가능-->
+        # 이름: <input title="이름 써라" value="김철수" name="userName" readonly> <br>
+        # 비밀번호: <input type="password"> <br>
+        # 이메일: <input type="email" placeholder="aaa@bbb.com"> <br>
+
+        # 취미:
+        <input class="gd" type="checkbox"> 게임
+        <input class="gd" type="checkbox" checked> 축구
+        <input class="gd" type="checkbox" disabled> 공연관람 <br>
+        <!-- 클래스는 여러개를 동일하게 줄 수도  있다.  띄어쓰기도 가능 , 그룹을 만든다-->
+        <!-- 하지만 id는 에러나지는 않지만 유일해야 하기 때문에 중복으로 주면 안된다. 띄어쓰기도 안된다. 단일-->
+        <!-- data-ㅁㄴㅇ -(대시) 뒤는 자유롭게 넣을수 있다. 서버로 보낼 데이터를 쉽게 보내기 위해-->
+
+
+        # 메일 수신 여부:
+        <input type="radio" name="mail-verify" checked> 예 
+        <input type="radio" name="mail-verify"> 아니오 <br>
+        <!-- 라디오 속성은 네임이 다르면 서로 다른 그룹으로 인식되기 때문에 같은 그룹으로 묶으려면 네임을 동일하게 해야한다.-->
+
+        # 파일: <input type="file" multiple> <br>
+        <!-- multiple을 주면 파일 여러개를 한번에 올릴 수 있다-->
+
+
+        <input type="range" min="0" max="5" value="3"> <br>
+        
+
+
+
+        <select>
+            <optgroup label="Coffee">
+                <option>Americano</option>
+                <option selected>Caffe Latte</option>
+                <option disabled>Cappuccino (Sold out)</option>            
+            </optgroup>
+
+            <optgroup label="Juice">
+                <option value="오렌지쥬스">Orange Juice</option>
+                <option>Lime Juice</option>
+            </optgroup>
+        </select>
+
+
+        # 주문 수량:
+        <input type="number" value="1" max="10"> <br>
+
+
+        <!-- 사용자 몰래 서버로 전송할 데이터 -->
+        <input type="hidden" name="abc" value="메롱">
+
+        <input type="button" value="ㅎㅇ">
+
+        <button type="button">그냥버튼</button> <!-- 아무런 기능이 없는 그냥 버튼 자바스크립트를 따러 넣어야함-->
+        <button type="reset">초기화버튼</button>   <!-- reset 과 submit은 잘 쓰지 않는다. 자바 스크립트에서 사용하는 기본 기능은 안쓰는것이 좋다-->
+        <button type="submit">전송버튼</button>
+
+    </form>
+
+</body>
+</html>

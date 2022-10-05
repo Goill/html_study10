@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fruits li:first-child { /*첫번째만*/
+            color: red;
+        }
+
+        #fruits li:last-child {/*마지막에만*/
+            color: green;
+        }
+
+        #fruits li:nth-child(4) {
+            color: blue;
+        }
+
+        /* n을 사용하면 n에 0부터 순차적으로 대입햇을때 걸리는 자식*/
+        #fruits li:nth-child(odd) { /* odd : 홀수*/
+            background: aqua;
+        }
+        #fruits li:nth-child(even) { /* even : 홀수*/
+            background: violet;
+        }
+        #fruits li:nth-child(3n+1) {  
+            font-style: italic;
+        }
+        
+        /* 클래스 orang이 아닌 나머지 */
+        #fruits li:not(.orang) {
+            font-size: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ul#fruits>li*7 -->
+    <ul id="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="orang">오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>자몽</li>
+        <li>라임</li>
+    </ul>
+</body>
+</html>

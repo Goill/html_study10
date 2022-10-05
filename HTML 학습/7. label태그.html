@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block; /*일반적으로 줄 바꿔서 쓰는경우가 많기 때문에 css에서 적용시킨다*/
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#">
+
+        <label> <!-- 라벨(inline)을 넣으면 그룹단위로 움직인다-->
+            <input type="checkbox" > 자동 로그인
+        </label>
+    
+        <label>
+            # 이름 : <input type="text">
+        </label>
+
+        <input type="checkbox" id="remember">
+
+        <div>ㅁㄴㅇㅁㄴㅇ</div>
+        <div>ㄴㅇㄴㅇㄴㅇㄴ</div>
+        <div>ㅂㅈㄷㅂㅈㄱㅂㄱ</div>
+    
+        <br><br><br><br>
+
+        <label for="remember"> <!-- for에 id을 넣으면 id값에 해당하는 요소만 동작한다-->
+            아이디 기억하기
+        </label>
+    </form>
+</body>
+</html>

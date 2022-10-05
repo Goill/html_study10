@@ -1,0 +1,13 @@
+@import url('./side.css'); 
+/* import로 다른 css를 한군데 묶어서 사용할 수도 있다. */
+
+h1 {
+    color: aqua;
+    font-weight: 400;
+
+}
+
+h2 {
+    color: violet;
+    font-size: 1.5em;
+}

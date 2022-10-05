@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* before, after 가상요소는 content 속성이 필수 (없으면 작동 안함)*/
+        /* 가상으로 태그 위로 올라가는게 before, 태그 아래로 가는게 after이다*/
+        li::before { /*: 뒤에 쓰는건 가상 선택자이다 하지만 before, after는 :: 써야한다*/
+            content: '번호';
+        }
+
+        /* 도형을 표현하려면 display 속성이 필수 이다*/
+        li::after {
+            content: ' ';
+            display: inline-  block;
+            width: 10px;
+            height: 10px;
+            background: red;
+            /* radius: 50% 를 주면 원이 된다*/
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body><!-- {} 중괄호는 텍스트 라인--> <!-- $는 순차적인 의미를 가지고 있다-->
+    
+
+        <!-- ul>li{$}*10-->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+</body>
+</html>
