@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko"> <!-- en으로 하면 자동 번역이 나올 수도 있으니 번거로우면 변경할것-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            display: inline;
+        }
+        em {
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com" target="_blank">네이버</a> <!--_blank는 새탭을 생성하고 이동한다-->
+
+    <div id="link">구글로 이동</div> <!-- a태그가 아니라도 링크를 사용할수 있지만 구조가 틀린것이다.-->
+
+    <a href="D:\html_css_study\HTML 학습\1. 블록과 인라인.html">다른 페이지 이동</a>
+    <!--절대 경로를 사용하면 다른 로컬 pc들도 접근할 수 있다는 의미가 있어서 보안을 위해 막아두었다-->
+
+    <a href="tel:+821066319143">전화 걸기</a>
+    <a href="mailto:jossii1524@naver.com">메일 보내기</a>
+
+    <!-- #top>h1+p-->
+    <div id="top">
+        <h1>안녕하세요</h1>
+        <p style="height: 2000px;">ㅎㅇ</p>
+    </div>
+
+    <a href="#top">top으로 이동</a> <!--id를 넣어 구간 이동 기능도 지원하고 있다  -->
+    
+    <script>
+        link.onclick = e => {
+            location.href='https://www.google.com';
+        };
+    </script>
+</body>
+</html>
