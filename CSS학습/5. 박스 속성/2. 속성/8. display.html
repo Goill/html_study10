@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box input {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+        }
+        .box input:nth-child(3) {
+            /* display: none; */
+            /*  투명도 설정 : 0에 가까울 수록 사라진다.  */
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <input class="text" value="1"></input>
+        <input class="text" value="2"></input>
+        <input class="text" value="3"></input>
+        <input class="text" value="4"></input>
+        <input class="text" value="5"></input>
+    </div>
+
+</body>
+</html>

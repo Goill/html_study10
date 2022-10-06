@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div {
+            color: blue;
+         }
+         #c-y {
+            color: yellow;
+         }
+         .c-g {
+            color: green;
+         }
+         body {
+            color: aqua;
+         }
+         div {
+            color: red;
+         }
+
+         /*1점*/
+         h1 {
+            background: lightcoral;
+         }
+
+         /*10+1 = 11*/
+         .bbb h1 {
+            background: orangered;
+         }
+
+         /*100+1 = 101*/
+         #aaa h1 {
+            background: gray;
+         }
+
+         /*100+1+10+1 = 112*/
+         #aaa div.bbb h1 {
+            background: greenyellow;
+         }
+
+         /*100+1 0+1 = 111 */
+         #aaa .bbb > h1 {
+            background: tomato;
+         }
+
+         /*1+10+10 = 21*/
+         div.bbb h1:first-child {
+            background: turquoise;
+         }
+    </style>
+</head>
+<body>
+    
+<!-- #c-y.c-g{안녕하세요$}*4 -->
+<div id="c-y" class="c-g" style="color : orange;">안녕하세요1</div>
+<div id="c-y" class="c-g">안녕하세요2</div>
+<div class="c-g">안녕하세요3</div>
+<div>안녕하세요4</div>
+<section>안녕하세요5</section>
+
+<!-- 우선순위  위험: !important(제일 강하다)    1. 인라인 스타일      2. id 선택자    3.클래스 선택자     4.태그      5.전체(가장 마지막에 선언된)-->
+
+    <div id="aaa">
+        <div class="bbb">
+            <h1>안녕하세요6</h1>
+        </div>
+    </div>
+
+
+</body>
+</html>

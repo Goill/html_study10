@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* rem을 제어하기 위함 */
+        html {
+            font-size: 10px;
+        }
+
+        /* 전체 폰트를 제어하기 위함*/
+        body {
+            font-size: 14px;
+        }
+
+        div {
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        .root {
+            width: 50em; /* em :  자기 자신의 폰트 사이즈 대비       - 50 *10 =500px*/
+            font-size: 20px;
+        }
+        
+        .parent {
+            /* rem : html 폰트 사이즈 대비 디폴트 16px*20 = 320 */
+            width: 30rem;
+        }
+
+        .child {
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="root">Root
+        <div class="parent">Parent
+            <div class="child">child1</div>
+            <div class="child">child2</div>
+        </div>
+    </div>
+</body>
+</html>

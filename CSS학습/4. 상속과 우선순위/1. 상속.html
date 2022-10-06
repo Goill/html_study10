@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .eco {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            /* 상속되는 속성은 글자 관련 속성 */
+            color: blue;
+            font-weight: 700;
+        }
+
+        .animal {
+            width: 200px; /* 상속이 아니라 기본값이 100% 라서 지우면 채워지는걸로 보인다. */
+            height: 200px;
+            background: orange;
+            /*  그러나 상속보다 새롭게 정한 값이 우선이다. */
+            color: aqua;
+            font-weight: 400;
+        }
+
+        .plant {
+            width: 200px;
+            height:  200px;
+            background: green;
+            /* 상속은 더 가까운 부모를 우선으로 받는다. */
+            color: violet;
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- .eco>.animal+(.plant>div*3) -->
+    <div class="eco">생태계
+        <div class="animal">동물</div>
+        <div class="plant">식물
+            <div>소나무</div>
+            <div>튤립</div>
+            <div>해바라기</div>
+        </div>
+    </div>
+</body>
+</html>
