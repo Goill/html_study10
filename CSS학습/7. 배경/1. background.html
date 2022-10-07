@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 4px dashed gray;
+            background-color: aqua;
+            background-image: url('../img/sky.jpg');
+            background-size: 150px 150px;
+            background-repeat: no-repeat; /* 반복되는게 보기 싫으면 넣으면 된다.  */
+            background-position: left 50px; /* 마진넣듯이 픽셀단위로 조정하면 된다. */
+                                                        /* 순서는 상관없지만 앞에는 위치 / 뒤에는 크기로 정해져있다.*/ 
+            background: url('../img/sky.jpg') no-repeat orange center center / 150px 150px;
+        }
+
+    </style>
+</head>
+<body>
+     <!-- img 태그는 원본 그대로 출력한다.-->
+    <div class="box">
+           
+    </div>
+    
+</body>
+</html>

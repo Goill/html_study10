@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 700px;
+            margin : 20px;
+            padding : 20px;
+            border : 3px solid blue;
+
+            /* overflow: hidden; 실제로 오버플로우를 활용해야할때 사용하기 어려울 수도 있음 */
+        }
+
+        .container2 {
+            width: 700px;
+            margin : 20px;
+            padding : 20px;
+            border : 3px solid red;
+
+          
+        }
+
+        .container3 {
+            width: 700px;
+            margin : 20px;
+            padding : 20px;
+            border : 3px solid violet;
+
+           
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellowgreen;
+            border-radius: 20px;
+
+            float: left;
+        }
+
+        .cbox { /* 웹 표준에 위배되는 방법? */
+            clear: both;
+        }
+
+        .clearfix::after { /* 제일 괜찮은 방법 */
+            content: ' '; /* befor after는 content가 있어야 한다. 가상(virtual 로 넣으니 문자는 안넣어야 한다)*/
+            display: block;
+            clear: both;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <!-- <div class="cbox"></div> -->
+    </div>
+
+    <div class="container2 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <!-- <div class="cbox"></div> -->
+    </div>
+
+
+    <div class="container3 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <!-- <div class="cbox"></div> -->
+    </div>
+
+</body>
+</html>

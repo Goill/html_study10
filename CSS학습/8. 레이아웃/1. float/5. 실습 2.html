@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+
+        nav.clearfix {
+            margin: auto;
+            width: 80%;
+            border: 2px solid black;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+     ul.gnb {
+        width: 30%;
+        
+        float: left;
+        padding: 2%;
+     }
+       
+     ul.tnb {
+        width: 30%;
+        float: right;
+        padding: 2%;
+     }
+      
+     .gnb li {
+        float: left;
+        margin-right: 3%;
+        text-align: center;
+     }
+
+     .tnb li {
+        float: right;
+        margin-right: 3%;
+        text-align: center;
+     }
+
+     ul.gnb:last-child {
+        margin-right: 0%;
+     }
+
+     ul.tnb:first-child {
+        margin-left: 0%;
+     }
+       
+
+        
+
+
+        
+    </style>
+</head>
+<body>
+    <nav class="clearfix">
+        <ul class="gnb clearfix">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BOARD</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+        <ul class="tnb clearfix">
+            <li><a href="#">검색</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
