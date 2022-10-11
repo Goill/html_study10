@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            margin:30px;
+            animation-name: rotation;
+            animation-duration: 2.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            /* normal : 0%에서 100% 까지 진행 */
+            animation-direction: alternate-reverse;
+            animation: rotation 2.5s linear alternate infinite; /* 애니메이션은 순서 상관없다*/
+        }
+
+        @keyframes rotation {
+            0%{ transform: translate(0,0 );}
+            25%{transform: translate(100px,0 );}
+            50%{transform: translate(100px,100px );}
+            75%{transform: translate(0,100px);}
+            100%{transform: translate(0,0 );}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
