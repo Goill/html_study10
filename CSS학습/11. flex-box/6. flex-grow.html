@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 400px;
+            border:  4px solid #000;
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+        }
+        .item {
+              /*width값을 고정하면 고정된 값을 뺀 나머지를 비율로 계산한다.*/
+            height: 100px;
+            background: red;
+            border: 4px dashed orange;
+            border-radius: 10px;
+        }
+        .item1 {
+            flex-grow: 1;
+            flex-basis: auto; /* 정확한 비율을 원하면 0을 넣어라     */
+        }
+        .item2 {
+            flex-grow: 2;
+            flex-basis: auto;
+        }
+        .item3 {
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+</body>
+</html>
