@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            margin: 20px;
+        }
+        .red {
+            background: red;
+        }
+        .green {
+            background: yellowgreen;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" onclick="callMessage()"></div>
+    <div class="box red" onclick="growUp()"></div>
+    <div class="box green" onclick="MakeText()"></div>
+
+    <script>
+        function callMessage() {
+            alert('박스클릭!!');
+        }
+         
+        const growUp = function() {
+            document.querySelector('.red').style.width = '200px';
+        };
+
+        const MakeText = () => {
+            document.querySelector('.green').textContent = '안냥';
+        };
+
+    </script>
+</body>
+</html>

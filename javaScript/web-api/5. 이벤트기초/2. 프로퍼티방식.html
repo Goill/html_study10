@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1">버튼1</button>
+    <button id="b2">버튼2</button>
+    <button id="b3">버튼3</button>
+    <script>
+        function sayHello() {
+            alert('안녕');
+        };
+
+        const [$b1, $b2, $b3] = [...document.querySelectorAll('button')];
+        $b1.onclick = sayHello;
+
+        $b2.onclick = function() {
+            this.style.width= '150px';
+        };
+
+        $b3.onmouseenter = function() {
+            this.style.background = 'red';
+        };
+
+        $b3.onmouseleave = function() {
+            this.style.background = 'green'; /* 프로퍼티는 한번만 쓰는거  위주로 */
+        };
+        $b3.onmouseleave = null;
+    </script>
+</body>
+</html>

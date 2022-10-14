@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li>사과</li>
+        <li>바나나</li>
+        <li>포도</li>
+    </ul>
+    <script>
+        const $fruits = document.querySelector('#fruits');
+
+        const $mango = document.createElement('li');
+      
+        $mango.textContent='망고';
+
+        //첫번째에 새롭게 들어갈 요소, 두번째에 타겟 요소
+        $fruits.insertBefore($mango, $fruits.children[1]);
+        $fruits.insertBefore($mango, $fruits.firstElementChild);
+    </script>
+
+</body>
+</html>

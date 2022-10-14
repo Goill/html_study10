@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="email" id="account" value="abc@naver.com">
+
+    <script>
+        const $in = document.querySelector('input');
+
+        console.log($in.attributes[1]);
+        console.log($in.attributes.id);
+        console.log($in.attributes.id.value);
+        console.log($in.attributes.value.value);
+
+        $in.attributes.value.value = 'dddd@naver.com';
+
+        $in.attributes.type.value = 'checkbox';
+    </script>
+</body>
+</html>

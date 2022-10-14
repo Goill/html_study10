@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #greet span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="greet">
+        Hello <span>World</span>
+    </div>
+
+    <ul id="fruits">사과</ul> 
+  
+
+    <script>
+        const $greet = document.getElementById('greet');
+
+       /*함수를 지워 쓰는게 낫다 innerText 사용하지 말것 */
+       /* trim() : 문자열 앞뒤공백 제거*/
+        console.log($greet.textContent.trim());
+        $greet.textContent="잘가세요"; /* 세미클론을 안써도 상관은 없는데 제어하는데 편하니 원래 사용하던데로 */
+
+        $greet.innerHTML= "<span>안녕히</span> 가세요";  /* 태그를 포함한 문자열을 사용하고 싶을때는 innerHtml을 사용해라*/
+
+        const $fruits = document.querySelector('#fruits');
+
+        // 수정
+        $fruits.innerHTML ='<li>포도<l/i>';
+
+        // 추가
+        $fruits.innerHTML +='<li>복숭아</li>';
+
+        // 자식 전체 삭제
+        $fruits.innerHTML = ' ';
+    </script>
+</body>
+</html>

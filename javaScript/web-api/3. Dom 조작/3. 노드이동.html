@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li>사과</li>
+        <li>바나나</li>
+        <li>포도</li>
+        <li>망고</li>
+    </ul>
+    <script>
+        const $fruits = document.querySelector('#fruits');
+
+       // 배열 디스트럭쳐링 (구조 분해 할당 : ES6+ 에서 추가) : 배열을 부순다?
+       const $children = $fruits.children;
+
+       const [$apple, $banana, $grape, $mango] = $children;
+
+       //노드 이동 (원래 랜더링된 데이터는 이동을 한다)
+       $fruits.appendChild($banana);
+
+       $fruits.insertBefore($grape, $banana);
+
+    </script>
+
+</body>
+</html>

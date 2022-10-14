@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li>사과</li>
+    </ul>
+
+    <script>
+
+        function addNewLi(text) {
+            //1. li태그를 동적으로 생성
+            // <li></li>
+            const $newLi = document.createElement('li');
+
+            //2. 텍스트를 삽입
+            //<li>복숭아</li>
+            $newLi.textContent = text;
+
+            //3. ul에 li 추가
+            const $fruits = document.getElementById('fruits');
+            $fruits.appendChild($newLi);
+        }
+
+        const fArr = ['바나나','포도','딸기','복숭아','참외','수박',]
+
+        for (let fname of fArr) { /* fArr에서 하나씩 뽑아서 넣는것*/
+            addNewLi(fname);
+        }
+    </script>
+</body>
+</html>

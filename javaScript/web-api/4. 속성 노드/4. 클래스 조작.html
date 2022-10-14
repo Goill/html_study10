@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .red {
+            color: red;
+            border:  2px dashed tomato;
+        }
+        .blue {
+            color: blue;
+            border: 2px dashed aqua;
+        }
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box red">안녕</div>
+    <script>
+        const $box = document.querySelector('.box');
+
+        $box.setAttribute('class', 'box blue');
+        $box.className = 'box blue';
+
+        //클래스 리스트
+        
+        $box.classList.add('aaa', 'bbb', 'ccc');
+        $box.classList.add('circle');
+
+        $box.classList.remove('aaa','bbb');
+        $box.classList.remove('circle');
+
+        $box.classList.replace('red', 'blue');
+
+        console.log($box.classList.contains('red'));
+        console.log($box.classList.contains('box'));
+
+        $box.onclick = e => {
+
+             $box.classList.toggle('circle');
+
+
+            //  if (!$box.classList.contains('circle')) {
+            //      $box.classList.add('circle');
+            // } else {
+            //      $box.classList.remove('circle');
+            //  }
+        };
+    </script>
+</body>
+</html>
